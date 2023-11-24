@@ -1,0 +1,398 @@
+#rheem {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+@media screen and (max-width:360px) {
+  #formmain{
+      margin-left: 48px;
+  }
+}
+input{
+  outline: none;
+}
+*{
+  /* background-color: white; */
+  padding: 0;
+  margin: 0;
+  /* overflow-x: auto;
+  overflow-y: auto; */
+}
+.icon1{
+  background-color: transparent;
+}
+
+body{
+  animation: bodyfade 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes bodyfade {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+#navbar{
+  height: 63px;
+  width: 100%;
+  background-color: #187ab9;
+  box-shadow: 0px 0px 4px;
+  border-bottom: 4px solid white;
+  display: inline-block;
+  position: fixed;
+}
+.navbarheading{
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 11.5px;
+  left: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  }
+  @media screen and (max-width:768px) {
+  .navbarheading{
+    font-size: 25px;
+    top: 13px;
+  }
+  }
+  @media screen and (max-width:480px) {
+  .navbarheading{
+    font-size: 22.5px;
+    top: 15px;
+  }
+  }
+  @media screen and (max-width:360px) {
+  .navbarheading{
+    font-size: 19.5px;
+    top: 17px;
+  }
+  }
+#navbar .navbar-ul{
+  float: right;
+  margin-right: 2rem;
+}
+#navbar .navbar-ul .navbar-li{
+  display: inline-block;
+  line-height: 57.5px;
+  margin: 0 15px;
+}
+#navbar .navbar-ul .navbar-li .navbar-link-of-home{
+  position: relative;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar .navbar-ul .navbar-li .navbar-link-of-home:hover::before{
+transform: scaleX(1);
+transform-origin: left;
+}
+#navbar .navbar-ul .navbar-li .navbar-link-of-home::before{
+position: absolute;
+content: "";
+left: 0;
+bottom: 0;
+height: 3px;
+width: 100%;
+background: white;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform .4s linear;
+}
+.dropdown-item{
+height: 40px;
+background-color: #187bb9;
+display: flex;
+align-items: center;
+}
+.dropdown-menu{
+margin-top: 24px;
+color: black;
+}
+.dropdown-menu .navbar-link-of-home{
+color: white;
+}
+.dropdown-item:hover{
+background-color: #187ab9; 
+color: #000000;
+height: 40px;
+}
+.searchicon1{
+color: white;
+float: right;
+line-height: 56px;
+font-size: 23px;
+margin-right: 35px;
+}
+@media screen and (max-width:1279px) {
+.searchicon1{
+font-size: 21.5px;
+}
+}
+@media screen and (max-width:768px) {
+.searchicon1{
+font-size: 17.5px;
+}
+}
+@media screen and (max-width:360px) {
+.searchicon1{
+font-size: 17px;
+margin-right: 15px;
+}
+}
+.cart{
+color: white;
+float: right;
+line-height: 56px;
+font-size: 25.5px;
+margin-right: 28px;
+}
+@media screen and (max-width:1279px) {
+.cart{
+font-size: 23.5px;
+}
+}
+@media screen and (max-width:768px) {
+.cart{
+font-size: 20px;
+}
+}
+@media screen and (max-width:360px) {
+.cart{
+font-size: 18px;
+margin-right: 10px;
+}
+}
+.heart2{
+color: white;
+float: right;
+line-height: 56px;
+font-size: 23px;
+margin-right: 36px;
+font-weight: bold;
+}
+@media screen and (max-width:1279px) {
+.heart2{
+font-size: 21px;
+}
+}
+@media screen and (max-width:768px) {
+.heart2{
+font-size: 18px;
+}
+}
+@media screen and (max-width:360px) {
+.heart2{
+font-size: 16.5px;
+margin-right: 15px;
+}
+}
+.heart1{
+color: white;
+float: right;
+line-height: 55px;
+font-size: 25.5px;
+right: 35px;
+top: .5px;
+position: absolute;
+font-weight: bold;
+opacity: 0;
+transition: all 1.5s ;
+}
+.heart1:hover{
+opacity: 1;
+}
+@media screen and (max-width:1325px) {
+.heart1{
+  display: none;
+}
+}
+label #bars , label #cancel{
+color: white;
+font-size: 30px;
+float: right;
+line-height: 56px;
+margin-right: 20px;
+display: none;
+}
+@media screen and (max-width:1325px) {
+label #bars{
+  display: block;
+}
+.navbar-ul{
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+  background-color: #187ab9;
+  top: 60px;
+  left: -100%;
+  text-align: center;
+  transition: all 0s;
+}
+#navbar .navbar-ul .navbar-li{
+  display: block;
+  margin: 50px 0;
+  line-height: 14px;
+}
+#navbar .navbar-ul .navbar-li .navbar-link-of-home{
+  font-size: 18px;
+}
+#check:checked ~ .navbar-ul{
+  left: 0;
+}
+#check:checked ~ .navbar-label #bars{
+  display: none;
+}
+#check:checked ~ .navbar-label #cancel{
+  display: block;
+}
+}
+@media screen and (max-width:1279px) {
+.navbar-label #bars{
+  font-size: 25px;
+}
+}
+@media screen and (max-width:768px) {
+.navbar-label #bars{
+  font-size: 20px;
+  margin-right: 34px;
+}
+}
+@media screen and (max-width:360px) {
+.navbar-label #bars{
+  font-size: 18px;
+  margin-right: 15px;
+}
+}
+@media screen and (max-width:1279px) {
+.navbar-label #canel{
+  font-size: 25px;
+}
+}
+@media screen and (max-width:768px) {
+.navbar-label #cancel{
+  font-size: 20px;
+  margin-right: 34px;
+}
+}
+.navbar-label{
+float: right;
+}
+#check{
+display: none;
+}
+.searchboxdiv{
+display: flex;
+justify-content: flex-end;
+width: cover;
+}
+#filtersearchbox{
+display: none;
+cursor: auto;
+position: fixed;
+width: 300.5px;
+background-color: #ffffff;
+padding:5px 8px 5px 8px;
+box-shadow: 0 0 1px inset;
+/* border: 1px solid #187ab9; */
+border: 0;
+outline: 0;
+}
+.lets{
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  left: 393.5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width:1200px) {
+  .lets{
+    display: none;
+  }
+}
+
+.faqdiv{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width: cover;
+    position: relative;
+    top: 60px;
+    height: 500px;
+    z-index: -1;
+}
+.faqt{
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 50%;
+    color: #187ab9;
+    transition: transform .5s ease-in;
+}
+.faqt:hover{
+    transform: skew(.2rad);
+}
+
+.manImage{
+   height: 400px;
+   width: 50%;
+   transition: transform .5s ease-in;
+}
+
+.manImage:hover{
+    transform: skew(.2rad);
+}
+
+       
+        
+
+
+
+
+.span1{
+    color: black;
+    font-weight: 500;
+}
+.span1:hover{
+    color: #187ab9;
+}
+
+#btn--1{
+    color: white;
+    text-decoration: none;
+}
+#btn-show-text{
+    color: white;
+}
+
+#card{
+    background-color: #187ab9
+}
+#card-body{
+    background-color: white;
+}
+
+.fa:hover{
+    color: black;
+}
+.accordion{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
